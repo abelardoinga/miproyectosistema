@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Actualizar Estudiante</title>
+</head>
+<body>
+
+<h2>Actualizar Estudiante</h2>
+
+<form th:action="@{/estudiante/update}" th:object="${estudiante}" method="post">
+  <!-- Campo oculto para enviar el ID del estudiante al servidor -->
+  <input type="hidden" th:field="*{id}" />
+  <!-- Campo de nombre -->
+  <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" th:field="*{nombre}" class="form-control" required />
+  </div>
+
+  <!-- Campo de apellido -->
+  <div class="form-group">
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" th:field="*{apellido}" class="form-control" required />
+  </div>
+
+  <!-- Campo de correo -->
+  <div class="form-group">
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" th:field="*{email}" class="form-control" required />
+  </div>
+
+  <!-- Campo oculto para el ID del estudiante -->
+  <input type="hidden" th:field="*{id}" />
+
+  <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+</form>
+
+</body>
+</html>

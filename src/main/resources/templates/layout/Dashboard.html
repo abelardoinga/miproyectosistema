@@ -1,0 +1,31 @@
+<!-- templates/layout.html -->
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Estudiantes</a></li>
+      <li><a href="#">Configuración</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Aquí se incluirá el contenido específico de cada página -->
+  <div th:replace="${body}"></div>
+
+</main>
+
+<footer>
+  <p>&copy; 2024 Mi Dashboard</p>
+</footer>
+</body>
+</html>
